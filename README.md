@@ -1,4 +1,4 @@
-# eslint-plugin-crema-lint
+# eslint-plugin-crema
 
 A plugin by and for Cremanians
 
@@ -10,30 +10,35 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-crema-lint`:
+Next, install `eslint-plugin-crema`:
 
 ```sh
-npm install eslint-plugin-crema-lint --save-dev
+npm install eslint-plugin-crema --save-dev
 ```
 
 ## Usage
 
-Add `crema-lint` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `crema` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-    "plugins": [
-        "crema-lint"
-    ]
+  "plugins": ["crema"]
 }
 ```
-
-
 
 ## Configurations
 
 <!-- begin auto-generated configs list -->
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
+
+|     | Name          |
+| :-- | :------------ |
+| ✅  | `recommended` |
+
 <!-- end auto-generated configs list -->
 
+<!-- begin auto-generated rules list -->
 
+| Name |
+| :--- |
+
+<!-- end auto-generated rules list -->
