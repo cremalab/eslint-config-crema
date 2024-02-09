@@ -6,6 +6,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:eslint-plugin/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:node/recommended",
     "prettier",
   ],
