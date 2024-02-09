@@ -5,12 +5,19 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:eslint-plugin/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:node/recommended",
+    "prettier",
   ],
+  plugins: ["react"],
   env: {
     node: true,
   },
   rules: {
+    "react/jsx-boolean-value": ["error"],
+    "react/self-closing-comp": ["error"],
+    "react/jsx-no-useless-fragment": ["error", { allowExpressions: true }],
+    "react/jsx-key": ["error"],
     "padding-line-between-statements": [
       "error",
       {
