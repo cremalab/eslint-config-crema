@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-crema-lint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A plugin by and for Cremanians",
   "keywords": [
     "eslint",
