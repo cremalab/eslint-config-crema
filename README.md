@@ -23,7 +23,7 @@ Import this config into your own ESLint configuration using the `extends` option
 ```js
 {
   "eslintConfig": {
-    "extends": "crema"
+    "extends": ["crema"]
   }
 }
 ```
@@ -32,7 +32,7 @@ Import this config into your own ESLint configuration using the `extends` option
 
 ```js
 module.exports = {
-    extends: "crema",
+    extends: ["crema"],
 }
 ```
 
