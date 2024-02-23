@@ -22,7 +22,7 @@
         "eslint-plugin-jsx-a11y": "^6.8.0",
         "eslint-plugin-react": "^7.33.2",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-storybook": "^0.6.15",
+        "eslint-plugin-storybook": "^0.8.0",
         "eslint-plugin-testing-library": "^6.2.0"
     },
     "devDependencies": {
@@ -32,7 +32,7 @@
         "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
     },
     "peerDependencies": {
-        "eslint": ">=7"
+        "eslint": ">=8"
     },
     "license": "ISC"
 }
