@@ -36,6 +36,25 @@ module.exports = {
 }
 ```
 
+## What's Included
+
+This ESLint config includes a selection of useful plugins, this is what you get out of the box:
+
+| Plugin                          | Presets                       |
+| ------------------------------- | ----------------------------- |
+| `eslint`                        | `recommended`                 |
+| `@typescript-eslint`            | `recommended`                 |
+| `import`                        | `recommended` + `typescript`  |
+| `jsx-a11y`                      | `recommended`                 |
+| `react`                         | `recommended` + `jsx-runtime` |
+| `react-hooks`                   | `recommended`                 |
+| `storybook`                     | `recommended`                 |
+| `testing-library`               | `react`                       |
+| `@tanstack/eslint-plugin-query` | `recommended`                 |
+| `prettier`                      | -                             |
+
+Note: Storybook and Testing Library plugins only run on select files. (Stories and Tests)
+
 ## Customizing Prettier
 
 Create a file named `.prettierrc.json` in your project directory. An example of Prettier configuration file:
@@ -57,6 +76,7 @@ Install the `Prettier` extension and create a file named `/.vscode/settings.json
 
 ```json
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
 }
 ```
