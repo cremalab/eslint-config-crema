@@ -1,5 +1,9 @@
 {
     "name": "eslint-config-crema",
+    "author": {
+        "name": "Crema",
+        "url": "https://crema.us/"
+    },
     "version": "0.0.1",
     "description": "An ESLint config by Crema for Cremanians and you.",
     "keywords": [
@@ -28,11 +32,8 @@
     "devDependencies": {
         "eslint": "^8.56.0"
     },
-    "engines": {
-        "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
-    },
     "peerDependencies": {
         "eslint": ">=8"
     },
-    "license": "ISC"
+    "license": "MIT"
 }
