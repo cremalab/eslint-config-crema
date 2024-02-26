@@ -1,44 +1,82 @@
-# eslint-plugin-crema
+# eslint-config-crema
 
-A plugin by and for Cremanians
+Shared ESLint config for React Typescript Projects.
 
 ## Installation
 
-You'll first need to install [ESLint](https://eslint.org/):
-
 ```sh
-npm i eslint --save-dev
+npm install --save-dev eslint-config-crema
 ```
 
-Next, install `eslint-plugin-crema`:
+You will also need to install `eslint`:
 
 ```sh
-npm install eslint-plugin-crema --save-dev
+npm install --save-dev eslint
 ```
 
 ## Usage
 
-Add `crema` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Import this config into your own ESLint configuration using the `extends` option. ESLint checks both `package.json` and `.eslintrc.*` files for its configuration:
 
-```json
+### package.json
+
+```js
 {
-  "plugins": ["crema"]
+  "eslintConfig": {
+    "extends": ["crema"]
+  }
 }
 ```
 
-## Configurations
+### .eslintrc.js
 
-<!-- begin auto-generated configs list -->
+```js
+module.exports = {
+    extends: ["crema"],
+}
+```
 
-|     | Name          |
-| :-- | :------------ |
-| ✅  | `recommended` |
+## What's Included
 
-<!-- end auto-generated configs list -->
+This ESLint config includes a selection of useful plugins, this is what you get out of the box:
 
-<!-- begin auto-generated rules list -->
+| Plugin                          | Presets                       |
+| ------------------------------- | ----------------------------- |
+| `eslint`                        | `recommended`                 |
+| `@typescript-eslint`            | `recommended`                 |
+| `import`                        | `recommended` + `typescript`  |
+| `jsx-a11y`                      | `recommended`                 |
+| `react`                         | `recommended` + `jsx-runtime` |
+| `react-hooks`                   | `recommended`                 |
+| `storybook`                     | `recommended`                 |
+| `testing-library`               | `react`                       |
+| `@tanstack/eslint-plugin-query` | `recommended`                 |
+| `prettier`                      | -                             |
 
-| Name |
-| :--- |
+Note: Storybook and Testing Library plugins only run on select files. (Stories and Tests)
 
-<!-- end auto-generated rules list -->
+## Customizing Prettier
+
+Create a file named `.prettierrc.json` in your project directory. An example of Prettier configuration file:
+
+```json
+{
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false
+}
+```
+
+Read more about [configuring `prettier`](https://prettier.io/docs/en/configuration.html) and [all of the available options](https://prettier.io/docs/en/options.html).
+
+### Setting Prettier as the default formatter for the workspace in VSCode
+
+Install the `Prettier` extension and create a file named `/.vscode/settings.json` with the following configuration:
+
+```json
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+}
+```
