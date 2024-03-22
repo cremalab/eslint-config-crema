@@ -40,18 +40,21 @@ module.exports = {
 
 This ESLint config includes a selection of useful plugins, this is what you get out of the box:
 
-| Plugin                          | Presets                       |
-| ------------------------------- | ----------------------------- |
-| `eslint`                        | `recommended`                 |
-| `@typescript-eslint`            | `recommended`                 |
-| `import`                        | `recommended` + `typescript`  |
-| `jsx-a11y`                      | `recommended`                 |
-| `react`                         | `recommended` + `jsx-runtime` |
-| `react-hooks`                   | `recommended`                 |
-| `storybook`                     | `recommended`                 |
-| `testing-library`               | `react`                       |
-| `@tanstack/eslint-plugin-query` | `recommended`                 |
-| `prettier`                      | -                             |
+| Plugin                              | Presets                       |
+| ----------------------------------- | ----------------------------- |
+| `eslint`                            | `recommended`                 |
+| `@typescript-eslint`                | `recommended`                 |
+| `import`                            | `recommended` + `typescript`  |
+| `eslint-import-resolver-typescript` | ``                            |
+| `jsx-a11y`                          | `recommended`                 |
+| `react`                             | `recommended` + `jsx-runtime` |
+| `react-hooks`                       | `recommended`                 |
+| `storybook`                         | `recommended`                 |
+| `testing-library`                   | `react`                       |
+| `jest`                              | `recommended`                 |
+| `react-hook-form`                   | `recommended                  |
+| `@tanstack/eslint-plugin-query`     | `recommended`                 |
+| `prettier`                          | -                             |
 
 Note: Storybook and Testing Library plugins only run on select files. (Stories and Tests)
 
