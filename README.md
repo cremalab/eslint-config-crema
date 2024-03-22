@@ -50,6 +50,7 @@ This ESLint config includes a selection of useful plugins, this is what you get 
 | `react-hooks`                   | `recommended`                 |
 | `storybook`                     | `recommended`                 |
 | `testing-library`               | `react`                       |
+| `react-hook-form`               | `recommended                  |
 | `@tanstack/eslint-plugin-query` | `recommended`                 |
 | `prettier`                      | -                             |
 

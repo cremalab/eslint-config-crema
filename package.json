@@ -4,15 +4,14 @@
         "name": "Crema",
         "url": "https://crema.us/"
     },
-    "version": "0.0.1",
-    "description": "An ESLint config by Crema for Cremanians and you.",
+    "version": "1.0.0",
+    "description": "A batteries-included ESLint config by Crema for Cremanians and you.",
     "keywords": [
         "eslint",
         "eslintconfig",
         "eslint-config"
     ],
-    "main": "./lib/index.js",
-    "exports": "./lib/index.js",
+    "main": "index.js",
     "scripts": {
         "lint": "eslint ."
     },
@@ -22,9 +21,11 @@
         "@typescript-eslint/eslint-plugin": "^6.21.0",
         "@typescript-eslint/parser": "^6.21.0",
         "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-cypress": "^2.15.1",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jsx-a11y": "^6.8.0",
         "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hook-form": "^0.3.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-storybook": "^0.8.0",
         "eslint-plugin-testing-library": "^6.2.0"
