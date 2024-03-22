@@ -4,8 +4,8 @@
         "name": "Crema",
         "url": "https://crema.us/"
     },
-    "version": "0.0.1",
-    "description": "An ESLint config by Crema for Cremanians and you.",
+    "version": "1.0.0",
+    "description": "A batteries-included ESLint config by Crema for Cremanians and you.",
     "keywords": [
         "eslint",
         "eslintconfig",
