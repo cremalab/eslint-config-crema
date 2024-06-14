@@ -15,7 +15,7 @@ const plugin = new ESLint({
     },
 })
 
-describe("rules", () => {
+describe("eslint-config-crema", () => {
     it("should prefer object shorthand", async () => {
         const code = `
             const test = 1;
