@@ -42,7 +42,7 @@ describe("eslint-config-crema", () => {
         expect(messages[0].message.includes("blank line")).toBe(true)
     })
 
-    it("should allow a blank line before a block", async () => {
+    it("should allow a blank line after a block", async () => {
         const code = `
             function doSomething() {
                 console.log("test");
