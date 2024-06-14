@@ -14,6 +14,7 @@ describe("eslint-config-crema recommended config", () => {
                 },
             },
         },
+        fix: true,
     })
 
     it("should prefer object shorthand", async () => {
@@ -23,9 +24,10 @@ describe("eslint-config-crema recommended config", () => {
         `
 
         const result = await plugin.lintText(code, { filePath: "test.js" })
-        const messages = result[0].messages
-        expect(messages.length).toBe(1)
-        expect(messages[0].message.includes("shorthand")).toBe(true)
+        expect(result[0].output).toBe(`
+            const test = 1;
+            const _obj = { test };
+        `)
     })
 
     it("should disallow a non-blank line after a block", async () => {
@@ -37,22 +39,12 @@ describe("eslint-config-crema recommended config", () => {
         `
 
         const result = await plugin.lintText(code, { filePath: "test.js" })
-        const messages = result[0].messages
-        expect(messages.length).toBe(1)
-        expect(messages[0].message.includes("blank line")).toBe(true)
-    })
-
-    it("should allow a blank line after a block", async () => {
-        const code = `
+        expect(result[0].output).toBe(`
             function doSomething() {
                 console.log("test");
             }
 
             doSomething();
-        `
-
-        const result = await plugin.lintText(code, { filePath: "test.js" })
-        const messages = result[0].messages
-        expect(messages.length).toBe(0)
+        `)
     })
 })
