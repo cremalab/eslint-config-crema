@@ -12,4 +12,8 @@ module.exports = {
             env: { mocha: true },
         },
     ],
+    parserOptions: {
+        sourceType: "module",
+        ecmaVersion: "latest",
+    },
 }
