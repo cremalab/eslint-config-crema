@@ -47,4 +47,39 @@ describe("eslint-config-crema recommended config", () => {
             doSomething();
         `)
     })
+
+    it("should disallow index as keys", async () => {
+        const incorrectCode = `
+            function Hello() {
+                return <div>Hello</div>;
+            }
+
+            const things = [{ id: 1 }, { id: 2 }];
+            things.map((thing, index) => (
+                <Hello key={index} />
+            ));
+        `
+
+        const result = await plugin.lintText(incorrectCode, {
+            filePath: "test.js",
+        })
+        expect(result[0].errorCount).toBe(1)
+
+        const correctCode = `
+            function Hello() {
+                return <div>Hello</div>;
+            }
+
+            const things = [{ id: 1 }, { id: 2 }];
+            things.map((thing) => (
+                <Hello key={thing.id} />
+            ));
+        `
+
+        const result2 = await plugin.lintText(correctCode, {
+            filePath: "test.js",
+        })
+
+        expect(result2[0].errorCount).toBe(0)
+    })
 })
